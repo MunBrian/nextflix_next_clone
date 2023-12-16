@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { GithubIcon } from "lucide-react";
-import GoogleIcon from "../../../public/google.svg";
+
 import Link from "next/link";
-import Image from "next/image";
 import React from "react";
+import GithubSiginButton from "@/app/components/GithubSiginButton";
+import GoogleSigninButton from "@/app/components/GoogleSigninButton";
 
 const LoginPage = () => {
   return (
@@ -36,17 +36,8 @@ const LoginPage = () => {
       </div>
 
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <Button variant="outline">
-          <GithubIcon className="w-4 h-4" />
-        </Button>
-        <Button variant="outline">
-          <Image
-            src={GoogleIcon}
-            alt="google icon"
-            priority
-            className="w-6 h-6"
-          />
-        </Button>
+        <GithubSiginButton />
+        <GoogleSigninButton />
       </div>
     </div>
   );
