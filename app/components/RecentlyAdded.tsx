@@ -9,6 +9,9 @@ async function getData() {
       WatchLists: true,
       imageString: true,
       youTubeString: true,
+      release: true,
+      age: true,
+      duration: true,
     },
     orderBy: {
       createdAt: "desc",
@@ -52,6 +55,9 @@ export default async function RecentlyAdded() {
                 watchListId={movie.WatchLists[0]?.id}
                 watchList={movie.WatchLists.length > 0 ? true : false}
                 youtubeUrl={movie.youTubeString}
+                age={movie.age}
+                time={movie.duration}
+                year={movie.release}
               />
             </div>
           </div>
