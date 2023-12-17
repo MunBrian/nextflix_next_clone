@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="px-5 lg:px-0">
       <MovieVideo />
     </div>
   );
