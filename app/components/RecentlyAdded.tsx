@@ -45,6 +45,7 @@ export default async function RecentlyAdded() {
                 width={800}
                 height={800}
                 alt="movie image"
+                priority
                 className="absolute w-full h-full -z-10 rounded-lg object-cover"
               />
               <MovieCard
