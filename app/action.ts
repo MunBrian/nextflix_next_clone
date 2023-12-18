@@ -17,3 +17,18 @@ export async function addToWatchList(formData: FormData) {
 
   revalidatePath(pathname);
 }
+
+export async function removeFromWatchList(formData: FormData) {
+  "use server";
+
+  const watchListId = formData.get("watchListId") as string;
+  const pathname = formData.get("pathname") as string;
+
+  const data = await prisma?.watchList.delete({
+    where: {
+      id: watchListId,
+    },
+  });
+
+  revalidatePath(pathname);
+}
