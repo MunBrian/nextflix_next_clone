@@ -31,7 +31,7 @@ async function getData(userId: string) {
 
 export default async function WatchList() {
   const session = await getServerSession(authOptions);
-  const data = await getData("aabbcc");
+  const data = await getData(session?.user?.email as string);
   return (
     <>
       <h1 className="text-white text-2xl font-bold underline mt-10 px-5 sm:px-0">
